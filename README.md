@@ -37,15 +37,29 @@ The metadata inspection identified:
 
 `SnakeController.NORMAL_SPEED` and `BURST_SPEED` have metadata defaults of `50.0f` and `100.0f`. The implementation does not patch these constants; it intercepts the runtime speed getter so the slider can change the speed live.
 
-## Build input required by GitHub Actions
+## Build input expected by GitHub Actions
 
-GitHub blocks ordinary repository files larger than 100 MiB, so the original ~138 MiB split archive is not committed to Git. Upload the supplied archive renamed with a `.zip` extension as an asset on a GitHub Release with the tag **`source-apk`**. The archive is already a ZIP; only its filename extension changes. The workflow downloads the `.zip` asset and renames it internally to `original.apk+`.
+The original split-package archive is too large to upload as one file through the GitHub mobile interface. The workflow therefore expects **seven binary parts** attached individually to a GitHub Release with the tag **`source-apk`**:
 
-Then run **Actions → Build SnakeModMenu APK set → Run workflow**. The artifact is `SnakeModMenu-apk-set` and contains all four re-signed APK splits in one `.apk+` archive.
+- `source.part01`
+- `source.part02`
+- `source.part03`
+- `source.part04`
+- `source.part05`
+- `source.part06`
+- `source.part07`
+
+Keep these exact filenames and upload all seven parts to the same release. Do not rename them or ZIP the parts individually. The workflow downloads the seven assets, concatenates them in filename order into `input/original.apk+`, and checks that the reconstructed archive is larger than 100 MB.
+
+Publishing the `source-apk` release automatically triggers the workflow. A manual run is also available from **Actions → Build SnakeModMenu APK set → Run workflow**, but it still requires the release and all seven assets to exist.
+
+## Build implementation
+
+This repository does not use a conventional Gradle Android project. The workflow compiles the native library through CMake, compiles the Java sources with `javac` and Android's `d8`, and uses Apktool plus Android build-tools to package and sign the split APKs.
 
 ## Important status
 
-The project source files and the APK packaging workflow are now committed to the `main` branch. **The final APK has not yet been built or tested on a device.** Before running the build, upload the split-package archive renamed to `.zip` as an asset on a GitHub Release tagged `source-apk`. Publishing that release automatically triggers the workflow.
+The project source files and APK packaging workflow are committed to the `main` branch. **The final APK has not yet been built or tested on a device.** Before a manual workflow run, upload all seven source parts to a GitHub Release tagged `source-apk`. Publishing that release automatically triggers the workflow.
 
 The workflow generates a temporary signing key on each run. Android treats the modded package as a different signature from the store-installed version, so uninstall the original before installing all four modded splits. A later build uses a new temporary key too; uninstall the previous modded build before installing that one.
 

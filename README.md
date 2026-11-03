@@ -45,7 +45,7 @@ Then run **Actions → Build SnakeModMenu APK set → Run workflow**. The artifa
 
 ## Important status
 
-The metadata and native target have been inspected, and the hook/menu source plus packaging workflow are prepared. **The final APK has not yet been built or tested on a device.** The GitHub connector currently permits repository reads but rejects content writes (`403 Resource not accessible by integration`), so these files still need to be committed through an authorized GitHub write connection before Actions can run.
+The project source files and the APK packaging workflow are now committed to the `main` branch. **The final APK has not yet been built or tested on a device.** Before running the build, upload the original split-package `.apk+` archive as an asset on a GitHub Release tagged `source-apk`, then run the workflow from the Actions tab.
 
 The workflow generates a temporary signing key on each run. Android treats the modded package as a different signature from the store-installed version, so uninstall the original before installing all four modded splits. A later build uses a new temporary key too; uninstall the previous modded build before installing that one.
 

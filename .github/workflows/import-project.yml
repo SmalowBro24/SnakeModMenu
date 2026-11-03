@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '.import/project-archive.b64'
+      - '.import/part*.txt'
 
 permissions:
   contents: write
@@ -18,27 +18,31 @@ jobs:
         id: extract
         shell: bash
         run: |
-          if [ ! -f .import/project-archive.b64 ]; then
-            echo "needed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
           python3 - <<'PY'
-          import io, zipfile
-          from pathlib import Path
+          import base64
+          import gzip
+          import io
+          import tarfile
+          from pathlib import Path, PurePosixPath
 
-          data = Path(".import/project-archive.b64").read_bytes()
-          with zipfile.ZipFile(io.BytesIO(data)) as archive:
-              prefix = "SnakeModMenu-project/"
-              for entry in archive.infolist():
-                  if entry.is_dir() or not entry.filename.startswith(prefix):
+          parts = sorted(Path(".import").glob("part*.txt"))
+          if not parts:
+              raise SystemExit("No archive parts found")
+          encoded = "".join(p.read_text(encoding="ascii").strip() for p in parts)
+          archive_data = gzip.decompress(base64.b64decode(encoded, validate=True))
+          with tarfile.open(fileobj=io.BytesIO(archive_data), mode="r:") as archive:
+              for entry in archive.getmembers():
+                  path = PurePosixPath(entry.name)
+                  if path.is_absolute() or ".." in path.parts or not entry.isfile():
                       continue
-                  relative = entry.filename[len(prefix):]
-                  target = Path(relative)
+                  target = Path(*path.parts)
                   target.parent.mkdir(parents=True, exist_ok=True)
-                  target.write_bytes(archive.read(entry))
+                  source = archive.extractfile(entry)
+                  if source is None:
+                      raise RuntimeError(f"Cannot read {entry.name}")
+                  target.write_bytes(source.read())
           PY
-          rm .import/project-archive.b64
-          rmdir .import 2>/dev/null || true
+          rm -rf .import
           echo "needed=true" >> "$GITHUB_OUTPUT"
       - name: Commit imported source
         if: steps.extract.outputs.needed == 'true'

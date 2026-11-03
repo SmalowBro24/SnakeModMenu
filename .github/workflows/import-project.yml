@@ -1,6 +1,7 @@
 name: Import project archive
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - '.import/project-archive.b64'
@@ -22,11 +23,10 @@ jobs:
             exit 0
           fi
           python3 - <<'PY'
-          import base64, io, zipfile
+          import io, zipfile
           from pathlib import Path
 
-          encoded = Path(".import/project-archive.b64").read_text().strip()
-          data = base64.b64decode(encoded, validate=True)
+          data = Path(".import/project-archive.b64").read_bytes()
           with zipfile.ZipFile(io.BytesIO(data)) as archive:
               prefix = "SnakeModMenu-project/"
               for entry in archive.infolist():

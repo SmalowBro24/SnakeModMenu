@@ -1,0 +1,5752 @@
+{
+  "metadata_version": 31,
+  "images": [
+    "Assembly-CSharp.dll",
+    "SnakeIO.Common.dll",
+    "SnakeIO.Client.Unity.dll"
+  ],
+  "targets": [
+    {
+      "image": "Assembly-CSharp.dll",
+      "type": "SpeedBoostTypeController",
+      "fields": [],
+      "methods": [
+        {
+          "name": ".ctor",
+          "declaring_type": 159,
+          "return_type": 43088,
+          "parameter_start": 796,
+          "parameter_count": 2,
+          "token": 100664269,
+          "flags": 6278,
+          "slot": 65535,
+          "parameters": [
+            "isEnabled",
+            "duration"
+          ]
+        },
+        {
+          "name": "OnStartGame",
+          "declaring_type": 159,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100664270,
+          "flags": 198,
+          "slot": 7,
+          "parameters": []
+        },
+        {
+          "name": "Initialize",
+          "declaring_type": 159,
+          "return_type": 43088,
+          "parameter_start": 798,
+          "parameter_count": 1,
+          "token": 100664271,
+          "flags": 198,
+          "slot": 5,
+          "parameters": [
+            "config"
+          ]
+        },
+        {
+          "name": "OnConfigUpdated",
+          "declaring_type": 159,
+          "return_type": 43088,
+          "parameter_start": 799,
+          "parameter_count": 1,
+          "token": 100664272,
+          "flags": 198,
+          "slot": 6,
+          "parameters": [
+            "config"
+          ]
+        }
+      ]
+    },
+    {
+      "image": "Assembly-CSharp.dll",
+      "type": "SnakeBoostController",
+      "fields": [
+        {
+          "name": "_Snake",
+          "type_index": 38927,
+          "token": 67110273
+        },
+        {
+          "name": "_playSfx",
+          "type_index": 21498,
+          "token": 67110274
+        },
+        {
+          "name": "_nameRiderOffset",
+          "type_index": 42861,
+          "token": 67110275
+        },
+        {
+          "name": "_moreMassSnakeBoost",
+          "type_index": 33172,
+          "token": 67110276
+        },
+        {
+          "name": "_snakeBoostFlags",
+          "type_index": 38867,
+          "token": 67110277
+        },
+        {
+          "name": "_speedBoostVisualEffect",
+          "type_index": 39318,
+          "token": 67110278
+        },
+        {
+          "name": "_invincibilityVisualEffect",
+          "type_index": 30777,
+          "token": 67110279
+        },
+        {
+          "name": "_invincibilitySnakeBoost",
+          "type_index": 30775,
+          "token": 67110280
+        },
+        {
+          "name": "_speedSnakeBoost",
+          "type_index": 39320,
+          "token": 67110281
+        },
+        {
+          "name": "_growthSnakeBoost",
+          "type_index": 27608,
+          "token": 67110282
+        },
+        {
+          "name": "_magnetSnakeBoost",
+          "type_index": 32477,
+          "token": 67110283
+        },
+        {
+          "name": "_zoomOutSnakeBoost",
+          "type_index": 44128,
+          "token": 67110284
+        },
+        {
+          "name": "_eventRoamingSnakeBoost",
+          "type_index": 25984,
+          "token": 67110285
+        },
+        {
+          "name": "_spawnProtectionVisualEffect",
+          "type_index": 39289,
+          "token": 67110286
+        },
+        {
+          "name": "_cachedBoostParameters",
+          "type_index": 6347,
+          "token": 67110287
+        },
+        {
+          "name": "BoostTypeFlags",
+          "type_index": 21704,
+          "token": 67110288
+        },
+        {
+          "name": "BoostPortalTrailDuration",
+          "type_index": 38440,
+          "token": 67110289
+        },
+        {
+          "name": "UpdatePortalTrailTime",
+          "type_index": 38440,
+          "token": 67110290
+        },
+        {
+          "name": "UpdatePortalTrailTimeInterval",
+          "type_index": 38449,
+          "token": 67110291
+        },
+        {
+          "name": "_speedBoostStarted",
+          "type_index": 21498,
+          "token": 67110292
+        },
+        {
+          "name": "_speedBoostStartTime",
+          "type_index": 24520,
+          "token": 67110293
+        },
+        {
+          "name": "_roamingSpeedBoostStarted",
+          "type_index": 21498,
+          "token": 67110294
+        },
+        {
+          "name": "_roamingSpeedBoostStartTime",
+          "type_index": 24520,
+          "token": 67110295
+        },
+        {
+          "name": "_boostRiderAccessoryId",
+          "type_index": 30546,
+          "token": 67110296
+        },
+        {
+          "name": "OnInvincibilityStartHandler",
+          "type_index": 51814,
+          "token": 67110297
+        },
+        {
+          "name": "OnInvincibilityEndHandler",
+          "type_index": 51811,
+          "token": 67110298
+        },
+        {
+          "name": "OnEventRoamingStartHandler",
+          "type_index": 19337,
+          "token": 67110299
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_MoreMassEnabled",
+          "declaring_type": 245,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665071,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_InvincibilityEnabled",
+          "declaring_type": 245,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665072,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_SpeedBoostEnabled",
+          "declaring_type": 245,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665073,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_GrowthBoostEnabled",
+          "declaring_type": 245,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665074,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_MagnetBoostEnabled",
+          "declaring_type": 245,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665075,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_ZoomOutBoostEnabled",
+          "declaring_type": 245,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665076,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_EventRoamingPelletBoostEnabled",
+          "declaring_type": 245,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665077,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_InvincibilityProgress",
+          "declaring_type": 245,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665078,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_SpeedBoostProgress",
+          "declaring_type": 245,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665079,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_CanStackNormally",
+          "declaring_type": 245,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665080,
+          "flags": 2193,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "Start",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665081,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnValidate",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665082,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnUpdate",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1190,
+          "parameter_count": 1,
+          "token": 100665083,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "timeDelta"
+          ]
+        },
+        {
+          "name": "GetBoostParameters",
+          "declaring_type": 245,
+          "return_type": 6346,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665084,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "CacheBoostParameters",
+          "declaring_type": 245,
+          "return_type": 6346,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665085,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "ActivateEventRoamingPelletBoosts",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665086,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "ActivateEventRoamingPelletBoosts",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1191,
+          "parameter_count": 1,
+          "token": 100665087,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "boostOptions"
+          ]
+        },
+        {
+          "name": "ActivateRoamingPelletAbilityFallback",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1192,
+          "parameter_count": 1,
+          "token": 100665088,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "progress"
+          ]
+        },
+        {
+          "name": "ActivateInvincibility",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1193,
+          "parameter_count": 1,
+          "token": 100665089,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "boostOptions"
+          ]
+        },
+        {
+          "name": "ActivateSpeedBoost",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1194,
+          "parameter_count": 1,
+          "token": 100665090,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "boostOptions"
+          ]
+        },
+        {
+          "name": "ActivateGrowthBoost",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1195,
+          "parameter_count": 1,
+          "token": 100665091,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "boostOptions"
+          ]
+        },
+        {
+          "name": "ActivateMagnetBoost",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1196,
+          "parameter_count": 1,
+          "token": 100665092,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "boostOptions"
+          ]
+        },
+        {
+          "name": "ActiveMoreMassBoost",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1197,
+          "parameter_count": 2,
+          "token": 100665093,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "addedScoreLength",
+            "boostOptions"
+          ]
+        },
+        {
+          "name": "OnUpdateMoreMassBoost",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1199,
+          "parameter_count": 1,
+          "token": 100665094,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "deltaTime"
+          ]
+        },
+        {
+          "name": "ActivateZoomOutBoost",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1200,
+          "parameter_count": 1,
+          "token": 100665095,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "boostOptions"
+          ]
+        },
+        {
+          "name": "DeactivateAllBoosts",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665096,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "DeactivateInvincibility",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1201,
+          "parameter_count": 1,
+          "token": 100665097,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "updateStatus"
+          ]
+        },
+        {
+          "name": "DeactivateSpeedBoost",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1202,
+          "parameter_count": 1,
+          "token": 100665098,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "updateStatus"
+          ]
+        },
+        {
+          "name": "DeactivateGrowthBoost",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1203,
+          "parameter_count": 1,
+          "token": 100665099,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "updateStatus"
+          ]
+        },
+        {
+          "name": "DeactivateMoreMassBoost",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1204,
+          "parameter_count": 1,
+          "token": 100665100,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "updateStatus"
+          ]
+        },
+        {
+          "name": "DeactivateMagnetBoost",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1205,
+          "parameter_count": 1,
+          "token": 100665101,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "updateStatus"
+          ]
+        },
+        {
+          "name": "DeactivateZoomOutBoost",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1206,
+          "parameter_count": 1,
+          "token": 100665102,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "updateStatus"
+          ]
+        },
+        {
+          "name": "DeactivateEventRoamingBoost",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1207,
+          "parameter_count": 1,
+          "token": 100665103,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "updateStatus"
+          ]
+        },
+        {
+          "name": "PlaySpeedBoostSfx",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665104,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "StopSpeedBoostSfx",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665105,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "ShowBoostPortalTrail",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1208,
+          "parameter_count": 1,
+          "token": 100665106,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "duration"
+          ]
+        },
+        {
+          "name": "OverrideRiderAccessoryId",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1209,
+          "parameter_count": 1,
+          "token": 100665107,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "accessoryId"
+          ]
+        },
+        {
+          "name": "OnEventRoamingBoostStart",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665108,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnEventRoamingBoostElapsed",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665109,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "TryEquipRiders",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665110,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "EquipRider",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1210,
+          "parameter_count": 2,
+          "token": 100665111,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "isPlayer",
+            "riderAccessoryID"
+          ]
+        },
+        {
+          "name": "TryGetRider",
+          "declaring_type": 245,
+          "return_type": 21497,
+          "parameter_start": 1212,
+          "parameter_count": 2,
+          "token": 100665112,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "isPlayer",
+            "rider"
+          ]
+        },
+        {
+          "name": "TryRemoveRiders",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665113,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "ResetRiderAccessoryId",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665114,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "GetBoostRiderAccessoryId",
+          "declaring_type": 245,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665115,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnZoomOutBoostStart",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665116,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnDeath",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665117,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "UpdateBoostStatus",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665118,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "UpdateInvincibilityBodyPartPositions",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1214,
+          "parameter_count": 1,
+          "token": 100665119,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "timeDelta"
+          ]
+        },
+        {
+          "name": "ShowInvincibilityGlow",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1215,
+          "parameter_count": 1,
+          "token": 100665120,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "deltaTime"
+          ]
+        },
+        {
+          "name": "SpawnBoostPortalTrail",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665121,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "UpdateBoostPortalTrail",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1216,
+          "parameter_count": 1,
+          "token": 100665122,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "timeDelta"
+          ]
+        },
+        {
+          "name": "DisableInvincibilityGlow",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665123,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "DisableInvincibilityGlowOnBodyPart",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1217,
+          "parameter_count": 1,
+          "token": 100665124,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "part"
+          ]
+        },
+        {
+          "name": "EnableBoostFX",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665125,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "DisableBoostFX",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1218,
+          "parameter_count": 1,
+          "token": 100665126,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "checkSpeedBoost"
+          ]
+        },
+        {
+          "name": "EnableSmokeFXOnBodyPart",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1219,
+          "parameter_count": 1,
+          "token": 100665127,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "headPosition"
+          ]
+        },
+        {
+          "name": "SetupUnifiedEffects",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": 1220,
+          "parameter_count": 1,
+          "token": 100665128,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "visualEffectEngine"
+          ]
+        },
+        {
+          "name": ".ctor",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665129,
+          "flags": 6278,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "<Start>b__49_0",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665130,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "<Start>b__49_1",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665131,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "<Start>b__49_2",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665132,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "<Start>b__49_3",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665133,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "<Start>b__49_4",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665134,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "<Start>b__49_5",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665135,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "<TryRemoveRiders>b__81_0",
+          "declaring_type": 245,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100665136,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "image": "Assembly-CSharp.dll",
+      "type": "SnakeIO.PlayerSnakeController",
+      "fields": [
+        {
+          "name": "_IsRevived",
+          "type_index": 21498,
+          "token": 67118592
+        },
+        {
+          "name": "_BonusMass",
+          "type_index": 30546,
+          "token": 67118593
+        },
+        {
+          "name": "_SpawnTime",
+          "type_index": 38440,
+          "token": 67118594
+        },
+        {
+          "name": "lastSpawnPosition",
+          "type_index": 42894,
+          "token": 67118595
+        },
+        {
+          "name": "_IsHoldingBoost",
+          "type_index": 21498,
+          "token": 67118596
+        },
+        {
+          "name": "_Eat",
+          "type_index": 38933,
+          "token": 67118597
+        },
+        {
+          "name": "_spawnProtectionVisualEffect",
+          "type_index": 39289,
+          "token": 67118598
+        },
+        {
+          "name": "_AI",
+          "type_index": 44204,
+          "token": 67118599
+        },
+        {
+          "name": "_speedBoostStarted",
+          "type_index": 21498,
+          "token": 67118600
+        },
+        {
+          "name": "_speedBoostStartTime",
+          "type_index": 38440,
+          "token": 67118601
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_PlayerName",
+          "declaring_type": 1968,
+          "return_type": 33420,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676894,
+          "flags": 2534,
+          "slot": 78,
+          "parameters": []
+        },
+        {
+          "name": "CacheComponents",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676895,
+          "flags": 197,
+          "slot": 43,
+          "parameters": []
+        },
+        {
+          "name": "Reset",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676896,
+          "flags": 198,
+          "slot": 44,
+          "parameters": []
+        },
+        {
+          "name": "OnDisable",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676897,
+          "flags": 196,
+          "slot": 46,
+          "parameters": []
+        },
+        {
+          "name": "OnRespawn",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8857,
+          "parameter_count": 2,
+          "token": 100676898,
+          "flags": 196,
+          "slot": 50,
+          "parameters": [
+            "score",
+            "spawnPosition"
+          ]
+        },
+        {
+          "name": "OnDespawnPositionReached",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676899,
+          "flags": 196,
+          "slot": 55,
+          "parameters": []
+        },
+        {
+          "name": "Spawn",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676900,
+          "flags": 198,
+          "slot": 47,
+          "parameters": []
+        },
+        {
+          "name": "Spawn",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8859,
+          "parameter_count": 1,
+          "token": 100676901,
+          "flags": 198,
+          "slot": 48,
+          "parameters": [
+            "spawnPosition"
+          ]
+        },
+        {
+          "name": "Setup",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8860,
+          "parameter_count": 2,
+          "token": 100676902,
+          "flags": 198,
+          "slot": 39,
+          "parameters": [
+            "snakeControllerConfig",
+            "initialLength"
+          ]
+        },
+        {
+          "name": "GetSpawnPoint",
+          "declaring_type": 1968,
+          "return_type": 42893,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676903,
+          "flags": 198,
+          "slot": 38,
+          "parameters": []
+        },
+        {
+          "name": "UpdateSnapshotData",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8862,
+          "parameter_count": 1,
+          "token": 100676904,
+          "flags": 198,
+          "slot": 40,
+          "parameters": [
+            "data"
+          ]
+        },
+        {
+          "name": "OnFallbackTransitionFinish",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676905,
+          "flags": 198,
+          "slot": 41,
+          "parameters": []
+        },
+        {
+          "name": "SetupPlayerName",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676906,
+          "flags": 196,
+          "slot": 51,
+          "parameters": []
+        },
+        {
+          "name": "TryConsumeBoostCube",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676907,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "ActivateBoosts",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8863,
+          "parameter_count": 2,
+          "token": 100676908,
+          "flags": 198,
+          "slot": 52,
+          "parameters": [
+            "boost",
+            "boostOptions"
+          ]
+        },
+        {
+          "name": "ActivateRealTimeBoost",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8865,
+          "parameter_count": 3,
+          "token": 100676909,
+          "flags": 486,
+          "slot": 81,
+          "parameters": [
+            "boost",
+            "boostOptions",
+            "cost"
+          ]
+        },
+        {
+          "name": "StartBoosts",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676910,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "SetupRespawnCondition",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8868,
+          "parameter_count": 1,
+          "token": 100676911,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "score"
+          ]
+        },
+        {
+          "name": "SetupStartCondition",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676912,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "GetCurrentTrueEquippedSkin",
+          "declaring_type": 1968,
+          "return_type": 38531,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676913,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "GetRandomizedMoreMassValue",
+          "declaring_type": 1968,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676914,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnApplyMoreMass",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8869,
+          "parameter_count": 2,
+          "token": 100676915,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "boostTypeController",
+            "moreMassValue"
+          ]
+        },
+        {
+          "name": "UpdateGamesPlayedProgression",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8871,
+          "parameter_count": 1,
+          "token": 100676916,
+          "flags": 150,
+          "slot": 65535,
+          "parameters": [
+            "fromGracefulFallback"
+          ]
+        },
+        {
+          "name": "StartDeathProcess",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8872,
+          "parameter_count": 2,
+          "token": 100676917,
+          "flags": 198,
+          "slot": 56,
+          "parameters": [
+            "killerID",
+            "isDramatic"
+          ]
+        },
+        {
+          "name": "PlayDeathSfx",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8874,
+          "parameter_count": 1,
+          "token": 100676918,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "killerID"
+          ]
+        },
+        {
+          "name": "IDie",
+          "declaring_type": 1968,
+          "return_type": 28595,
+          "parameter_start": 8875,
+          "parameter_count": 2,
+          "token": 100676919,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "killerID",
+            "isDramatic"
+          ]
+        },
+        {
+          "name": "Despawn",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676920,
+          "flags": 196,
+          "slot": 60,
+          "parameters": []
+        },
+        {
+          "name": "Die",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8877,
+          "parameter_count": 2,
+          "token": 100676921,
+          "flags": 198,
+          "slot": 57,
+          "parameters": [
+            "killerID",
+            "isDramatic"
+          ]
+        },
+        {
+          "name": "KillerSize",
+          "declaring_type": 1968,
+          "return_type": 30545,
+          "parameter_start": 8879,
+          "parameter_count": 1,
+          "token": 100676922,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "killerId"
+          ]
+        },
+        {
+          "name": "DeathCoordinates",
+          "declaring_type": 1968,
+          "return_type": 39880,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676923,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "ActivateSpeedBurst",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8880,
+          "parameter_count": 1,
+          "token": 100676924,
+          "flags": 198,
+          "slot": 63,
+          "parameters": [
+            "active"
+          ]
+        },
+        {
+          "name": "IsInvincible",
+          "declaring_type": 1968,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676925,
+          "flags": 198,
+          "slot": 64,
+          "parameters": []
+        },
+        {
+          "name": "OnUpdate",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8881,
+          "parameter_count": 1,
+          "token": 100676926,
+          "flags": 196,
+          "slot": 61,
+          "parameters": [
+            "deltaTime"
+          ]
+        },
+        {
+          "name": "AddLength",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8882,
+          "parameter_count": 1,
+          "token": 100676927,
+          "flags": 198,
+          "slot": 66,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "RemoveLength",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8883,
+          "parameter_count": 1,
+          "token": 100676928,
+          "flags": 198,
+          "slot": 67,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "OnBodyPartRemoved",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8884,
+          "parameter_count": 1,
+          "token": 100676929,
+          "flags": 196,
+          "slot": 69,
+          "parameters": [
+            "bodyPart"
+          ]
+        },
+        {
+          "name": "EjectMass",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8885,
+          "parameter_count": 1,
+          "token": 100676930,
+          "flags": 196,
+          "slot": 70,
+          "parameters": [
+            "deltaTime"
+          ]
+        },
+        {
+          "name": "UpdateScoreUI",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676931,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "IncreaseScore",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8886,
+          "parameter_count": 1,
+          "token": 100676932,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "valueIncrease"
+          ]
+        },
+        {
+          "name": "IsFirstGameForCurrentStep",
+          "declaring_type": 1968,
+          "return_type": 21497,
+          "parameter_start": 8887,
+          "parameter_count": 1,
+          "token": 100676933,
+          "flags": 145,
+          "slot": 65535,
+          "parameters": [
+            "gameType"
+          ]
+        },
+        {
+          "name": "CanConsumePellet",
+          "declaring_type": 1968,
+          "return_type": 21497,
+          "parameter_start": 8888,
+          "parameter_count": 1,
+          "token": 100676934,
+          "flags": 486,
+          "slot": 79,
+          "parameters": [
+            "pellet"
+          ]
+        },
+        {
+          "name": "Digest",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8889,
+          "parameter_count": 1,
+          "token": 100676935,
+          "flags": 486,
+          "slot": 80,
+          "parameters": [
+            "pelletData"
+          ]
+        },
+        {
+          "name": "DigestBoostCube",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676936,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "ConsumeBoostCube",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676937,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "CollectBoostCube",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676938,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "PlayEatPelletSfx",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8890,
+          "parameter_count": 2,
+          "token": 100676939,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "type",
+            "boostType"
+          ]
+        },
+        {
+          "name": "IsInProtectionMode",
+          "declaring_type": 1968,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676940,
+          "flags": 196,
+          "slot": 72,
+          "parameters": []
+        },
+        {
+          "name": "SolidTailIndex",
+          "declaring_type": 1968,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676941,
+          "flags": 196,
+          "slot": 73,
+          "parameters": []
+        },
+        {
+          "name": "SetupSpawnProtection",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": 8892,
+          "parameter_count": 1,
+          "token": 100676942,
+          "flags": 198,
+          "slot": 74,
+          "parameters": [
+            "progress01"
+          ]
+        },
+        {
+          "name": "ShouldEnableSpawnProtection",
+          "declaring_type": 1968,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676943,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "SetupAbilitiesFromFallback",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676944,
+          "flags": 196,
+          "slot": 58,
+          "parameters": []
+        },
+        {
+          "name": "GetSpriteOrderOffset",
+          "declaring_type": 1968,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676945,
+          "flags": 196,
+          "slot": 54,
+          "parameters": []
+        },
+        {
+          "name": "IsMine",
+          "declaring_type": 1968,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676946,
+          "flags": 198,
+          "slot": 75,
+          "parameters": []
+        },
+        {
+          "name": "InitializePulseUserConfig",
+          "declaring_type": 1968,
+          "return_type": 39076,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676947,
+          "flags": 196,
+          "slot": 76,
+          "parameters": []
+        },
+        {
+          "name": "TellSpawnProtectionDontUseTheirEffectsIfUnifiedIsEnabled",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676948,
+          "flags": 196,
+          "slot": 77,
+          "parameters": []
+        },
+        {
+          "name": ".ctor",
+          "declaring_type": 1968,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676949,
+          "flags": 6278,
+          "slot": 65535,
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "image": "Assembly-CSharp.dll",
+      "type": "SnakeIO.SnakeController",
+      "fields": [
+        {
+          "name": "SnakeStatusFlags",
+          "type_index": 39137,
+          "token": 67118637
+        },
+        {
+          "name": "SnakeActionFlags",
+          "type_index": 38845,
+          "token": 67118638
+        },
+        {
+          "name": "SnakePortalFlags",
+          "type_index": 39044,
+          "token": 67118639
+        },
+        {
+          "name": "_ReviveCount",
+          "type_index": 30548,
+          "token": 67118640
+        },
+        {
+          "name": "SnakeControllerConfig",
+          "type_index": 38931,
+          "token": 67118641
+        },
+        {
+          "name": "BURST_SPEED",
+          "type_index": 38458,
+          "token": 67118642
+        },
+        {
+          "name": "NORMAL_SPEED",
+          "type_index": 38458,
+          "token": 67118643
+        },
+        {
+          "name": "MAX_ANGLE_PER_FRAME",
+          "type_index": 38458,
+          "token": 67118644
+        },
+        {
+          "name": "MIN_BODY_DISTANCE",
+          "type_index": 38458,
+          "token": 67118645
+        },
+        {
+          "name": "BODY_ROTATION_SPEED",
+          "type_index": 38458,
+          "token": 67118646
+        },
+        {
+          "name": "HeadTransform",
+          "type_index": 41330,
+          "token": 67118647
+        },
+        {
+          "name": "NameContainer",
+          "type_index": 33421,
+          "token": 67118648
+        },
+        {
+          "name": "PlayerNameText",
+          "type_index": 44199,
+          "token": 67118649
+        },
+        {
+          "name": "_emote",
+          "type_index": 30132,
+          "token": 67118650
+        },
+        {
+          "name": "textMeshRenderer",
+          "type_index": 32773,
+          "token": 67118651
+        },
+        {
+          "name": "_bodyPartsRenderer",
+          "type_index": 23364,
+          "token": 67118652
+        },
+        {
+          "name": "_headRenderer",
+          "type_index": 39436,
+          "token": 67118653
+        },
+        {
+          "name": "FramesToSkip",
+          "type_index": 30550,
+          "token": 67118654
+        },
+        {
+          "name": "Boost",
+          "type_index": 38862,
+          "token": 67118655
+        },
+        {
+          "name": "SizeMultOffset",
+          "type_index": 38440,
+          "token": 67118656
+        },
+        {
+          "name": "BodyPartPoolId",
+          "type_index": 21460,
+          "token": 67118657
+        },
+        {
+          "name": "SnakeID",
+          "type_index": 30550,
+          "token": 67118658
+        },
+        {
+          "name": "EquippedSkinID",
+          "type_index": 30550,
+          "token": 67118659
+        },
+        {
+          "name": "_CurrentPath",
+          "type_index": 39033,
+          "token": 67118660
+        },
+        {
+          "name": "<AllBodyPartsMoved>k__BackingField",
+          "type_index": 21498,
+          "token": 67118661
+        },
+        {
+          "name": "_gracefulFallbackManager",
+          "type_index": 27491,
+          "token": 67118662
+        },
+        {
+          "name": "_HeadLastPosition",
+          "type_index": 42894,
+          "token": 67118663
+        },
+        {
+          "name": "_HeadPoint",
+          "type_index": 42894,
+          "token": 67118664
+        },
+        {
+          "name": "_MinBodyBounds",
+          "type_index": 42861,
+          "token": 67118665
+        },
+        {
+          "name": "_MaxBodyBounds",
+          "type_index": 42861,
+          "token": 67118666
+        },
+        {
+          "name": "_InterestObject",
+          "type_index": 11167,
+          "token": 67118667
+        },
+        {
+          "name": "_protectionTimer",
+          "type_index": 39057,
+          "token": 67118668
+        },
+        {
+          "name": "_isDespawnByEnteringPortal",
+          "type_index": 21498,
+          "token": 67118669
+        },
+        {
+          "name": "_EnableFrameSkipping",
+          "type_index": 21498,
+          "token": 67118670
+        },
+        {
+          "name": "_SnakeID",
+          "type_index": 30546,
+          "token": 67118671
+        },
+        {
+          "name": "_NextSnakeID",
+          "type_index": 30551,
+          "token": 67118672
+        },
+        {
+          "name": "_CurrentSkin",
+          "type_index": 38533,
+          "token": 67118673
+        },
+        {
+          "name": "_bodyBounds",
+          "type_index": 21751,
+          "token": 67118674
+        },
+        {
+          "name": "_snakeEnterPortalAnimation",
+          "type_index": 38938,
+          "token": 67118675
+        },
+        {
+          "name": "_snakeVisualEffectHandler",
+          "type_index": 42360,
+          "token": 67118676
+        },
+        {
+          "name": "_snakePulseEngine",
+          "type_index": 39062,
+          "token": 67118677
+        },
+        {
+          "name": "_snakePulseUserConfig",
+          "type_index": 39077,
+          "token": 67118678
+        },
+        {
+          "name": "_unifiedSnakeVisualEffectEngine",
+          "type_index": 42357,
+          "token": 67118679
+        },
+        {
+          "name": "RepositionBody",
+          "type_index": 35403,
+          "token": 67118680
+        },
+        {
+          "name": "OnSnakeDeath",
+          "type_index": 19337,
+          "token": 67118681
+        },
+        {
+          "name": "OnDespawnByEnteringPortalStarted",
+          "type_index": 19337,
+          "token": 67118682
+        },
+        {
+          "name": "<SnakeSpawnData>k__BackingField",
+          "type_index": 39111,
+          "token": 67118683
+        },
+        {
+          "name": "_Length",
+          "type_index": 25572,
+          "token": 67118684
+        },
+        {
+          "name": "_PreviousLength",
+          "type_index": 25573,
+          "token": 67118685
+        },
+        {
+          "name": "_inputEnabled",
+          "type_index": 21498,
+          "token": 67118686
+        },
+        {
+          "name": "_TempDirection",
+          "type_index": 42896,
+          "token": 67118687
+        },
+        {
+          "name": "_Direction",
+          "type_index": 42896,
+          "token": 67118688
+        },
+        {
+          "name": "_enterPortalSpeed",
+          "type_index": 39118,
+          "token": 67118689
+        },
+        {
+          "name": "_pelletAbsorptionEnabled",
+          "type_index": 21498,
+          "token": 67118690
+        },
+        {
+          "name": "<Size>k__BackingField",
+          "type_index": 38440,
+          "token": 67118691
+        },
+        {
+          "name": "_SpeedBurstActive",
+          "type_index": 21501,
+          "token": 67118692
+        },
+        {
+          "name": "_LastUpdatedSize",
+          "type_index": 38440,
+          "token": 67118693
+        },
+        {
+          "name": "EjectMassInterval",
+          "type_index": 38458,
+          "token": 67118694
+        },
+        {
+          "name": "_EjectMassTime",
+          "type_index": 38440,
+          "token": 67118695
+        },
+        {
+          "name": "dramaticDeathCoroutine",
+          "type_index": 23901,
+          "token": 67118696
+        },
+        {
+          "name": "_BoostCubeInventory",
+          "type_index": 21590,
+          "token": 67118697
+        },
+        {
+          "name": "_OngoingBoosts",
+          "type_index": 11832,
+          "token": 67118698
+        },
+        {
+          "name": "_ForceUpdateSize",
+          "type_index": 21498,
+          "token": 67118699
+        },
+        {
+          "name": "_SkippedFrames",
+          "type_index": 38440,
+          "token": 67118700
+        },
+        {
+          "name": "_CachedScale",
+          "type_index": 42896,
+          "token": 67118701
+        },
+        {
+          "name": "_CachedDirection",
+          "type_index": 42896,
+          "token": 67118702
+        },
+        {
+          "name": "_SnakePanel",
+          "type_index": 41328,
+          "token": 67118703
+        },
+        {
+          "name": "_playerAccessoryController",
+          "type_index": 34888,
+          "token": 67118704
+        },
+        {
+          "name": "<NeckBodyPart>k__BackingField",
+          "type_index": 28222,
+          "token": 67118705
+        },
+        {
+          "name": "_skinAccessoryUserInfo",
+          "type_index": 38615,
+          "token": 67118706
+        },
+        {
+          "name": "_setupInterestManagementFlag",
+          "type_index": 21498,
+          "token": 67118707
+        },
+        {
+          "name": "_gracefulFallbackAccountType",
+          "type_index": 34891,
+          "token": 67118708
+        },
+        {
+          "name": "_snakePanelOffset",
+          "type_index": 42861,
+          "token": 67118709
+        },
+        {
+          "name": "_snakeUpdateData",
+          "type_index": 39172,
+          "token": 67118710
+        },
+        {
+          "name": "OnSnakeUpdate",
+          "type_index": 19337,
+          "token": 67118711
+        },
+        {
+          "name": "_cachedSortingOrder",
+          "type_index": 39115,
+          "token": 67118712
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_Emote",
+          "declaring_type": 1981,
+          "return_type": 30131,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676988,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_FollowObject",
+          "declaring_type": 1981,
+          "return_type": 27090,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676989,
+          "flags": 2180,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_BodyPartRenderObjects",
+          "declaring_type": 1981,
+          "return_type": 10781,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676990,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_AllBodyPartsMoved",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676991,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_AllBodyPartsMoved",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8906,
+          "parameter_count": 1,
+          "token": 100676992,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_BodyBounds",
+          "declaring_type": 1981,
+          "return_type": 21750,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676993,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "GetSpawnPoint",
+          "declaring_type": 1981,
+          "return_type": 42893,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676994,
+          "flags": 1478,
+          "slot": 38,
+          "parameters": []
+        },
+        {
+          "name": "Setup",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8907,
+          "parameter_count": 2,
+          "token": 100676995,
+          "flags": 1478,
+          "slot": 39,
+          "parameters": [
+            "snakeControllerConfig",
+            "initialLength"
+          ]
+        },
+        {
+          "name": "RenameGameObjectUsingSkinID",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676996,
+          "flags": 132,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "UpdateSnapshotData",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8909,
+          "parameter_count": 1,
+          "token": 100676997,
+          "flags": 1478,
+          "slot": 40,
+          "parameters": [
+            "data"
+          ]
+        },
+        {
+          "name": "OnFallbackTransitionFinish",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676998,
+          "flags": 1478,
+          "slot": 41,
+          "parameters": []
+        },
+        {
+          "name": "get_SnakeSpawnData",
+          "declaring_type": 1981,
+          "return_type": 39110,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100676999,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_SnakeSpawnData",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8910,
+          "parameter_count": 1,
+          "token": 100677000,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "set_Length",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8911,
+          "parameter_count": 1,
+          "token": 100677001,
+          "flags": 2180,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_Length",
+          "declaring_type": 1981,
+          "return_type": 25571,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677002,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_Direction",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8912,
+          "parameter_count": 1,
+          "token": 100677003,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_Direction",
+          "declaring_type": 1981,
+          "return_type": 42893,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677004,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_Speed",
+          "declaring_type": 1981,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677005,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_EnteringPortalSpeed",
+          "declaring_type": 1981,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677006,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_AbsorbRadius",
+          "declaring_type": 1981,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677007,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_MagnetAbsorbRadius",
+          "declaring_type": 1981,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677008,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_SpeedScaler",
+          "declaring_type": 1981,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677009,
+          "flags": 2180,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_SizePercent",
+          "declaring_type": 1981,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677010,
+          "flags": 2180,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_HeadSpriteRadius",
+          "declaring_type": 1981,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677011,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_MaxHeadSpriteRadius",
+          "declaring_type": 1981,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677012,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_Size",
+          "declaring_type": 1981,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677013,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_Size",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8913,
+          "parameter_count": 1,
+          "token": 100677014,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_BodyPartCount",
+          "declaring_type": 1981,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677015,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_IsDying",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677016,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_IsDramaticDeathOnGoing",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677017,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_IsDespawning",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677018,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_IsReviving",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677019,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_IsInDeathFog",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677020,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_IsVisible",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677021,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_IsInPortal",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677022,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_NeckBodyPart",
+          "declaring_type": 1981,
+          "return_type": 28221,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677023,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_NeckBodyPart",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8914,
+          "parameter_count": 1,
+          "token": 100677024,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_SkinID",
+          "declaring_type": 1981,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677025,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_AccessoryUserInfo",
+          "declaring_type": 1981,
+          "return_type": 38613,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677026,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "SetSkinAccessory",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8915,
+          "parameter_count": 1,
+          "token": 100677027,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "skinAccessoryUserInfo"
+          ]
+        },
+        {
+          "name": "GetGracefulFallbackAccountType",
+          "declaring_type": 1981,
+          "return_type": 34889,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677028,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "GetSubscriptionPlayerName",
+          "declaring_type": 1981,
+          "return_type": 39880,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677029,
+          "flags": 132,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "Awake",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677030,
+          "flags": 452,
+          "slot": 42,
+          "parameters": []
+        },
+        {
+          "name": "OnDestroy",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677031,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "CacheComponents",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677032,
+          "flags": 453,
+          "slot": 43,
+          "parameters": []
+        },
+        {
+          "name": "Reset",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677033,
+          "flags": 454,
+          "slot": 44,
+          "parameters": []
+        },
+        {
+          "name": "OnEnable",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677034,
+          "flags": 452,
+          "slot": 45,
+          "parameters": []
+        },
+        {
+          "name": "OnDisable",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677035,
+          "flags": 452,
+          "slot": 46,
+          "parameters": []
+        },
+        {
+          "name": "Spawn",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677036,
+          "flags": 454,
+          "slot": 47,
+          "parameters": []
+        },
+        {
+          "name": "Spawn",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8916,
+          "parameter_count": 1,
+          "token": 100677037,
+          "flags": 454,
+          "slot": 48,
+          "parameters": [
+            "spawnPosition"
+          ]
+        },
+        {
+          "name": "InternalSpawn",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8917,
+          "parameter_count": 1,
+          "token": 100677038,
+          "flags": 132,
+          "slot": 65535,
+          "parameters": [
+            "initialPosition"
+          ]
+        },
+        {
+          "name": "Respawn",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8918,
+          "parameter_count": 1,
+          "token": 100677039,
+          "flags": 454,
+          "slot": 49,
+          "parameters": [
+            "respawnConfig"
+          ]
+        },
+        {
+          "name": "SetName",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8919,
+          "parameter_count": 1,
+          "token": 100677040,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "playerName"
+          ]
+        },
+        {
+          "name": "ResetBoostCubeInventory",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677041,
+          "flags": 132,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnRespawn",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8920,
+          "parameter_count": 2,
+          "token": 100677042,
+          "flags": 452,
+          "slot": 50,
+          "parameters": [
+            "score",
+            "spawnPosition"
+          ]
+        },
+        {
+          "name": "SetupPlayerName",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677043,
+          "flags": 1476,
+          "slot": 51,
+          "parameters": []
+        },
+        {
+          "name": "IsPlayer",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677044,
+          "flags": 486,
+          "slot": 11,
+          "parameters": []
+        },
+        {
+          "name": "ActivateBoosts",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8922,
+          "parameter_count": 2,
+          "token": 100677045,
+          "flags": 454,
+          "slot": 52,
+          "parameters": [
+            "boost",
+            "boostOptions"
+          ]
+        },
+        {
+          "name": "GetPlayerPanel",
+          "declaring_type": 1981,
+          "return_type": 41327,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677046,
+          "flags": 454,
+          "slot": 53,
+          "parameters": []
+        },
+        {
+          "name": "OffsetPlayerPanelPosition",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8924,
+          "parameter_count": 1,
+          "token": 100677047,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "offset"
+          ]
+        },
+        {
+          "name": "ResetPlayerPanelPosition",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677048,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "SetPlayerPanelAlpha",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8925,
+          "parameter_count": 1,
+          "token": 100677049,
+          "flags": 486,
+          "slot": 14,
+          "parameters": [
+            "alpha"
+          ]
+        },
+        {
+          "name": "SetupPlayerNameOrder",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677050,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "SetupSpriteOrder",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677051,
+          "flags": 132,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "GetSpriteOrderOffset",
+          "declaring_type": 1981,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677052,
+          "flags": 452,
+          "slot": 54,
+          "parameters": []
+        },
+        {
+          "name": "GetInitialSpriteOrder",
+          "declaring_type": 1981,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677053,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "SetupInitialDirection",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8926,
+          "parameter_count": 1,
+          "token": 100677054,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "initialPosition"
+          ]
+        },
+        {
+          "name": "AddInitialBodyParts",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8927,
+          "parameter_count": 1,
+          "token": 100677055,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "initialPosition"
+          ]
+        },
+        {
+          "name": "TryGetBodyPartSnapshotData",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": 8928,
+          "parameter_count": 2,
+          "token": 100677056,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "index",
+            "bodyPartData"
+          ]
+        },
+        {
+          "name": "SpawnBodyPartRenderObject",
+          "declaring_type": 1981,
+          "return_type": 23356,
+          "parameter_start": 8930,
+          "parameter_count": 2,
+          "token": 100677057,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "bodyPartPosition",
+            "bodyPartIndex"
+          ]
+        },
+        {
+          "name": "DespawnByEnteringPortalStart",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677058,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "DespawnByEnteringPortalEnd",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677059,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "DespawnAtCurrentPosition",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677060,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnDespawnPositionReached",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677061,
+          "flags": 452,
+          "slot": 55,
+          "parameters": []
+        },
+        {
+          "name": "StartDeathProcess",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8932,
+          "parameter_count": 2,
+          "token": 100677062,
+          "flags": 454,
+          "slot": 56,
+          "parameters": [
+            "killerID",
+            "isDramatic"
+          ]
+        },
+        {
+          "name": "Die",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8934,
+          "parameter_count": 2,
+          "token": 100677063,
+          "flags": 454,
+          "slot": 57,
+          "parameters": [
+            "killerID",
+            "isDramatic"
+          ]
+        },
+        {
+          "name": "UpdateSnapshotKills",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8936,
+          "parameter_count": 1,
+          "token": 100677064,
+          "flags": 145,
+          "slot": 65535,
+          "parameters": [
+            "snapshotData"
+          ]
+        },
+        {
+          "name": "TryToRushDramaticSnakeDeath",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677065,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "SetupAbilitiesFromFallback",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677066,
+          "flags": 452,
+          "slot": 58,
+          "parameters": []
+        },
+        {
+          "name": "ResetBodyRenderer",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677067,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnAfterDeathAndDespawn",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677068,
+          "flags": 452,
+          "slot": 59,
+          "parameters": []
+        },
+        {
+          "name": "NormalDeathDelay",
+          "declaring_type": 1981,
+          "return_type": 28595,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677069,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "NormalDeath",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677070,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "DramaticDeath",
+          "declaring_type": 1981,
+          "return_type": 28595,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677071,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "GenerateEatableHead",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677072,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "RemoveBodyParts",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8937,
+          "parameter_count": 2,
+          "token": 100677073,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "bodyParts",
+            "generateEatableObjects"
+          ]
+        },
+        {
+          "name": "GenerateBodyPartsAfterDeath",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677074,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "HideBodyPartsDramatic",
+          "declaring_type": 1981,
+          "return_type": 28595,
+          "parameter_start": 8939,
+          "parameter_count": 1,
+          "token": 100677075,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "bodyParts"
+          ]
+        },
+        {
+          "name": "SplitMovedBodyParts",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8940,
+          "parameter_count": 2,
+          "token": 100677076,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "moved",
+            "notMoved"
+          ]
+        },
+        {
+          "name": "GenerateEatableObject",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8942,
+          "parameter_count": 2,
+          "token": 100677077,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "position",
+            "sprite"
+          ]
+        },
+        {
+          "name": "StartDespawnProcess",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677078,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "Despawn",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677079,
+          "flags": 452,
+          "slot": 60,
+          "parameters": []
+        },
+        {
+          "name": "Update",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677080,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "LateUpdate",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677081,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnUpdate",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8944,
+          "parameter_count": 1,
+          "token": 100677082,
+          "flags": 452,
+          "slot": 61,
+          "parameters": [
+            "deltaTime"
+          ]
+        },
+        {
+          "name": "OnLateUpdate",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677083,
+          "flags": 452,
+          "slot": 62,
+          "parameters": []
+        },
+        {
+          "name": "SetupDirection",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8945,
+          "parameter_count": 1,
+          "token": 100677084,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "deltaTime"
+          ]
+        },
+        {
+          "name": "HitCheck",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8946,
+          "parameter_count": 1,
+          "token": 100677085,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "isInvincible"
+          ]
+        },
+        {
+          "name": "HitCheck",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8947,
+          "parameter_count": 3,
+          "token": 100677086,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "oldPosition",
+            "hitID",
+            "isInvincible"
+          ]
+        },
+        {
+          "name": "UpdatePath",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677087,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "RepositionBodyParts",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8950,
+          "parameter_count": 1,
+          "token": 100677088,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "deltaTime"
+          ]
+        },
+        {
+          "name": "UpdateCollision",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8951,
+          "parameter_count": 2,
+          "token": 100677089,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "currentTarg",
+            "bodyPartIndex"
+          ]
+        },
+        {
+          "name": "OnInterestStateChange",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8953,
+          "parameter_count": 1,
+          "token": 100677090,
+          "flags": 486,
+          "slot": 4,
+          "parameters": [
+            "isPlayerInterestedInObject"
+          ]
+        },
+        {
+          "name": "GetPlayerName",
+          "declaring_type": 1981,
+          "return_type": 39880,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677091,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "GetLastPosition",
+          "declaring_type": 1981,
+          "return_type": 42893,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677092,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "ActivateSpeedBurst",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8954,
+          "parameter_count": 1,
+          "token": 100677093,
+          "flags": 454,
+          "slot": 63,
+          "parameters": [
+            "active"
+          ]
+        },
+        {
+          "name": "CrownSetEnable",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8955,
+          "parameter_count": 1,
+          "token": 100677094,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "isEnabled"
+          ]
+        },
+        {
+          "name": "IsInvincible",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677095,
+          "flags": 454,
+          "slot": 64,
+          "parameters": []
+        },
+        {
+          "name": "IsImmuneToWall",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677096,
+          "flags": 454,
+          "slot": 65,
+          "parameters": []
+        },
+        {
+          "name": "GetScale",
+          "declaring_type": 1981,
+          "return_type": 42893,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677097,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "LastHeadPosition",
+          "declaring_type": 1981,
+          "return_type": 42893,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677098,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "GetVisualScale",
+          "declaring_type": 1981,
+          "return_type": 42893,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677099,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "IsActive",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677100,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "IsAlive",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677101,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OverrideReviveCount",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8956,
+          "parameter_count": 1,
+          "token": 100677102,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "count"
+          ]
+        },
+        {
+          "name": "GetReviveCount",
+          "declaring_type": 1981,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677103,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "GetHeadRenderer",
+          "declaring_type": 1981,
+          "return_type": 39434,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677104,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "SetSkin",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8957,
+          "parameter_count": 1,
+          "token": 100677105,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "skinID"
+          ]
+        },
+        {
+          "name": "SetSkinCoroutine",
+          "declaring_type": 1981,
+          "return_type": 28595,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677106,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "UpdateWholeSkin",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677107,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "UpdateSkinSprite",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8958,
+          "parameter_count": 1,
+          "token": 100677108,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "index"
+          ]
+        },
+        {
+          "name": "GetSkinSprite",
+          "declaring_type": 1981,
+          "return_type": 39371,
+          "parameter_start": 8959,
+          "parameter_count": 2,
+          "token": 100677109,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "index",
+            "totalParts"
+          ]
+        },
+        {
+          "name": "RegisterInvincibilitySortingOrderListener",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677110,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "UnregisterInvincibilitySortingOrderListener",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677111,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnInvincibilityStartHandler",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677112,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnInvincibilityEndHandler",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677113,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "UpdatePlayerNamePosition",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8961,
+          "parameter_count": 3,
+          "token": 100677114,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "direction",
+            "scale",
+            "offset"
+          ]
+        },
+        {
+          "name": "AddBodyPart",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677115,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "RemoveBodyPartFromTail",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677116,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "SetLength",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8964,
+          "parameter_count": 1,
+          "token": 100677117,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "targetLength"
+          ]
+        },
+        {
+          "name": "RemoveBodyPartAtIndex",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8965,
+          "parameter_count": 1,
+          "token": 100677118,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "index"
+          ]
+        },
+        {
+          "name": "RemoveBodyPart",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8966,
+          "parameter_count": 1,
+          "token": 100677119,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "bodyPart"
+          ]
+        },
+        {
+          "name": "OnBodyGeometryChangesApplied",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8967,
+          "parameter_count": 1,
+          "token": 100677120,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "rendererState"
+          ]
+        },
+        {
+          "name": "GetBodyPartEquivalent",
+          "declaring_type": 1981,
+          "return_type": 30545,
+          "parameter_start": 8968,
+          "parameter_count": 1,
+          "token": 100677121,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "length"
+          ]
+        },
+        {
+          "name": "AddLength",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8969,
+          "parameter_count": 1,
+          "token": 100677122,
+          "flags": 454,
+          "slot": 66,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "RemoveLength",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8970,
+          "parameter_count": 1,
+          "token": 100677123,
+          "flags": 454,
+          "slot": 67,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "GetScore",
+          "declaring_type": 1981,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677124,
+          "flags": 454,
+          "slot": 68,
+          "parameters": []
+        },
+        {
+          "name": "CanBeTargeted",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677125,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "UpdateSize",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8971,
+          "parameter_count": 1,
+          "token": 100677126,
+          "flags": 132,
+          "slot": 65535,
+          "parameters": [
+            "forced"
+          ]
+        },
+        {
+          "name": "UpdateSnakeSnapshotData",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8972,
+          "parameter_count": 1,
+          "token": 100677127,
+          "flags": 132,
+          "slot": 65535,
+          "parameters": [
+            "data"
+          ]
+        },
+        {
+          "name": "UpdateAbilitySnapshotData",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8973,
+          "parameter_count": 1,
+          "token": 100677128,
+          "flags": 132,
+          "slot": 65535,
+          "parameters": [
+            "data"
+          ]
+        },
+        {
+          "name": "UpdateBodyPartSnapshotData",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8974,
+          "parameter_count": 1,
+          "token": 100677129,
+          "flags": 132,
+          "slot": 65535,
+          "parameters": [
+            "snapshotData"
+          ]
+        },
+        {
+          "name": "SnakeCanChangeSize",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677130,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "ResetSnakeBounds",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8975,
+          "parameter_count": 2,
+          "token": 100677131,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "headPosition",
+            "headRadius"
+          ]
+        },
+        {
+          "name": "UpdateSnakeBounds",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8977,
+          "parameter_count": 2,
+          "token": 100677132,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "updatedBodyPartPosition",
+            "updatedBodyPartRadius"
+          ]
+        },
+        {
+          "name": "RecalculateSnakeBounds",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677133,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "StartUpdatingSize",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677134,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnDrawGizmos",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677135,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnInterestManagementSystemDimensionsChanged",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677136,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnBodyPartRemoved",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8979,
+          "parameter_count": 1,
+          "token": 100677137,
+          "flags": 452,
+          "slot": 69,
+          "parameters": [
+            "bodyPart"
+          ]
+        },
+        {
+          "name": "EjectMass",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8980,
+          "parameter_count": 1,
+          "token": 100677138,
+          "flags": 452,
+          "slot": 70,
+          "parameters": [
+            "timeDelta"
+          ]
+        },
+        {
+          "name": "MaxBodyPart",
+          "declaring_type": 1981,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677139,
+          "flags": 452,
+          "slot": 71,
+          "parameters": []
+        },
+        {
+          "name": "IsInProtectionMode",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677140,
+          "flags": 452,
+          "slot": 72,
+          "parameters": []
+        },
+        {
+          "name": "SolidTailIndex",
+          "declaring_type": 1981,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677141,
+          "flags": 452,
+          "slot": 73,
+          "parameters": []
+        },
+        {
+          "name": "SetupSpawnProtection",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8981,
+          "parameter_count": 1,
+          "token": 100677142,
+          "flags": 1478,
+          "slot": 74,
+          "parameters": [
+            "progress01"
+          ]
+        },
+        {
+          "name": "EnableInput",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677143,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "DisableInput",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677144,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "EnablePelletAbsorption",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677145,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "DisablePelletAbsorption",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677146,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "GetOngoingBoosts",
+          "declaring_type": 1981,
+          "return_type": 11831,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677147,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OnBoostCubeDone",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677148,
+          "flags": 486,
+          "slot": 15,
+          "parameters": []
+        },
+        {
+          "name": "AddOnDeathListener",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8982,
+          "parameter_count": 1,
+          "token": 100677149,
+          "flags": 486,
+          "slot": 16,
+          "parameters": [
+            "callback"
+          ]
+        },
+        {
+          "name": "RemoveOnDeathListener",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8983,
+          "parameter_count": 1,
+          "token": 100677150,
+          "flags": 486,
+          "slot": 17,
+          "parameters": [
+            "callback"
+          ]
+        },
+        {
+          "name": "AddOnDespawnByEnteringPortalStartedListener",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8984,
+          "parameter_count": 1,
+          "token": 100677151,
+          "flags": 486,
+          "slot": 18,
+          "parameters": [
+            "callback"
+          ]
+        },
+        {
+          "name": "RemoveOnDespawnByEnteringPortalStartedListener",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8985,
+          "parameter_count": 1,
+          "token": 100677152,
+          "flags": 486,
+          "slot": 19,
+          "parameters": [
+            "callback"
+          ]
+        },
+        {
+          "name": "CanTriggerBoostHud",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677153,
+          "flags": 486,
+          "slot": 20,
+          "parameters": []
+        },
+        {
+          "name": "RandomEffectSortingOrder",
+          "declaring_type": 1981,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677154,
+          "flags": 486,
+          "slot": 21,
+          "parameters": []
+        },
+        {
+          "name": "IsBoostActive",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": 8986,
+          "parameter_count": 1,
+          "token": 100677155,
+          "flags": 486,
+          "slot": 22,
+          "parameters": [
+            "boostType"
+          ]
+        },
+        {
+          "name": "IsAnyWeightDependenciesActive",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": 8987,
+          "parameter_count": 1,
+          "token": 100677156,
+          "flags": 486,
+          "slot": 23,
+          "parameters": [
+            "boostType"
+          ]
+        },
+        {
+          "name": "GetBoostParameters",
+          "declaring_type": 1981,
+          "return_type": 6346,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677157,
+          "flags": 486,
+          "slot": 7,
+          "parameters": []
+        },
+        {
+          "name": "AddEventRoamingListener",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8988,
+          "parameter_count": 1,
+          "token": 100677158,
+          "flags": 486,
+          "slot": 8,
+          "parameters": [
+            "action"
+          ]
+        },
+        {
+          "name": "RemoveEventRoamingListener",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8989,
+          "parameter_count": 1,
+          "token": 100677159,
+          "flags": 486,
+          "slot": 9,
+          "parameters": [
+            "action"
+          ]
+        },
+        {
+          "name": "RenderObjectList",
+          "declaring_type": 1981,
+          "return_type": 10781,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677160,
+          "flags": 486,
+          "slot": 10,
+          "parameters": []
+        },
+        {
+          "name": "CalculateLengthToAdd",
+          "declaring_type": 1981,
+          "return_type": 30545,
+          "parameter_start": 8990,
+          "parameter_count": 1,
+          "token": 100677161,
+          "flags": 132,
+          "slot": 65535,
+          "parameters": [
+            "pelletData"
+          ]
+        },
+        {
+          "name": "TotalScoreMultiplier",
+          "declaring_type": 1981,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677162,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "IsMine",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677163,
+          "flags": 454,
+          "slot": 75,
+          "parameters": []
+        },
+        {
+          "name": "GetSnakeAccessoriesData",
+          "declaring_type": 1981,
+          "return_type": 38818,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677164,
+          "flags": 486,
+          "slot": 25,
+          "parameters": []
+        },
+        {
+          "name": "GetSnakeUpdateData",
+          "declaring_type": 1981,
+          "return_type": 39171,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677165,
+          "flags": 486,
+          "slot": 26,
+          "parameters": []
+        },
+        {
+          "name": "GetSortingOrder",
+          "declaring_type": 1981,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677166,
+          "flags": 486,
+          "slot": 27,
+          "parameters": []
+        },
+        {
+          "name": "GetSkinAsset",
+          "declaring_type": 1981,
+          "return_type": 38623,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677167,
+          "flags": 486,
+          "slot": 28,
+          "parameters": []
+        },
+        {
+          "name": "GetHeadTransform",
+          "declaring_type": 1981,
+          "return_type": 41327,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677168,
+          "flags": 486,
+          "slot": 29,
+          "parameters": []
+        },
+        {
+          "name": "TryGetBodyPart",
+          "declaring_type": 1981,
+          "return_type": 21497,
+          "parameter_start": 8991,
+          "parameter_count": 2,
+          "token": 100677169,
+          "flags": 486,
+          "slot": 30,
+          "parameters": [
+            "index",
+            "bodyPart"
+          ]
+        },
+        {
+          "name": "AddUpdateListener",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8993,
+          "parameter_count": 1,
+          "token": 100677170,
+          "flags": 486,
+          "slot": 31,
+          "parameters": [
+            "action"
+          ]
+        },
+        {
+          "name": "RemoveUpdateListener",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8994,
+          "parameter_count": 1,
+          "token": 100677171,
+          "flags": 486,
+          "slot": 32,
+          "parameters": [
+            "action"
+          ]
+        },
+        {
+          "name": "RefreshAccessories",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677172,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "SnakeIO.GameplayEffects.ISnakePulseUser.GetEngine",
+          "declaring_type": 1981,
+          "return_type": 39061,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677173,
+          "flags": 481,
+          "slot": 33,
+          "parameters": []
+        },
+        {
+          "name": "SnakeIO.GameplayEffects.ISnakePulseUser.Initialize",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8995,
+          "parameter_count": 1,
+          "token": 100677174,
+          "flags": 481,
+          "slot": 34,
+          "parameters": [
+            "snakePulseEngine"
+          ]
+        },
+        {
+          "name": "InitializePulseUserConfig",
+          "declaring_type": 1981,
+          "return_type": 39076,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677175,
+          "flags": 1476,
+          "slot": 76,
+          "parameters": []
+        },
+        {
+          "name": "InitializeSnakePulseUser",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677176,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "TriggerAddLengthPulse",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8996,
+          "parameter_count": 1,
+          "token": 100677177,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "hasNewSegment"
+          ]
+        },
+        {
+          "name": "TriggerEatPulse",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677178,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "TriggerSegmentGainPulse",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677179,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "SnakeIO.VisualEffects.IUnifiedSnakeVisualEffectUser.Initialize",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8997,
+          "parameter_count": 1,
+          "token": 100677180,
+          "flags": 481,
+          "slot": 35,
+          "parameters": [
+            "visualEffectEngine"
+          ]
+        },
+        {
+          "name": "SnakeIO.VisualEffects.IUnifiedSnakeVisualEffectUser.OnMaterialUpdated",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8998,
+          "parameter_count": 1,
+          "token": 100677181,
+          "flags": 481,
+          "slot": 36,
+          "parameters": [
+            "material"
+          ]
+        },
+        {
+          "name": "SnakeIO.VisualEffects.IUnifiedSnakeVisualEffectUser.OnConfigUpdated",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 8999,
+          "parameter_count": 2,
+          "token": 100677182,
+          "flags": 481,
+          "slot": 37,
+          "parameters": [
+            "configData",
+            "spawnProtectionRangeEffect"
+          ]
+        },
+        {
+          "name": "SetupUnifiedVisualEffects",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677183,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "TellSpawnProtectionDontUseTheirEffectsIfUnifiedIsEnabled",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677184,
+          "flags": 1476,
+          "slot": 77,
+          "parameters": []
+        },
+        {
+          "name": "TellBoostEffectsDontUseTheirEffectsIfUnifiedIsEnabled",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677185,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "TellEnterPortalAnimationDontUseTheirEffectsIfUnifiedIsEnabled",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677186,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "DebugValidateSnakeLength",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": 9001,
+          "parameter_count": 1,
+          "token": 100677187,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "length"
+          ]
+        },
+        {
+          "name": ".ctor",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677188,
+          "flags": 6276,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": ".cctor",
+          "declaring_type": 1981,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100677189,
+          "flags": 6289,
+          "slot": 65535,
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "image": "SnakeIO.Common.dll",
+      "type": "SnakeIO.Common.Prediction.SnakeStatePredictor`2",
+      "fields": [
+        {
+          "name": "<DistanceBetweenBodyParts>k__BackingField",
+          "type_index": 38440,
+          "token": 67109023
+        },
+        {
+          "name": "<ScorePerBodyPart>k__BackingField",
+          "type_index": 30546,
+          "token": 67109024
+        },
+        {
+          "name": "<MinimumBodyPartsCount>k__BackingField",
+          "type_index": 30546,
+          "token": 67109025
+        },
+        {
+          "name": "<MaximumBodyPartsCount>k__BackingField",
+          "type_index": 30546,
+          "token": 67109026
+        },
+        {
+          "name": "<LinearSpeed>k__BackingField",
+          "type_index": 38440,
+          "token": 67109027
+        },
+        {
+          "name": "<AngularSpeed>k__BackingField",
+          "type_index": 38440,
+          "token": 67109028
+        },
+        {
+          "name": "<TargetHeadDirection>k__BackingField",
+          "type_index": 42861,
+          "token": 67109029
+        },
+        {
+          "name": "<TotalDistance>k__BackingField",
+          "type_index": 38440,
+          "token": 67109030
+        },
+        {
+          "name": "<Score>k__BackingField",
+          "type_index": 30546,
+          "token": 67109031
+        },
+        {
+          "name": "<SpeedMultiplier>k__BackingField",
+          "type_index": 38440,
+          "token": 67109032
+        },
+        {
+          "name": "<BodyPartsScaleMultiplier>k__BackingField",
+          "type_index": 38440,
+          "token": 67109033
+        },
+        {
+          "name": "<PredictedHeadPosition>k__BackingField",
+          "type_index": 42861,
+          "token": 67109034
+        },
+        {
+          "name": "<PredictedHeadRotation>k__BackingField",
+          "type_index": 38440,
+          "token": 67109035
+        },
+        {
+          "name": "<PredictedHeadDirection>k__BackingField",
+          "type_index": 42861,
+          "token": 67109036
+        },
+        {
+          "name": "<StopOnCollision>k__BackingField",
+          "type_index": 21498,
+          "token": 67109037
+        },
+        {
+          "name": "<RemovePathPointsBehindTailAutomatically>k__BackingField",
+          "type_index": 21498,
+          "token": 67109038
+        },
+        {
+          "name": "<IsStopped>k__BackingField",
+          "type_index": 21498,
+          "token": 67109039
+        },
+        {
+          "name": "<RemoveBodyPartsFromHeadToTail>k__BackingField",
+          "type_index": 21498,
+          "token": 67109040
+        },
+        {
+          "name": "OnCollision",
+          "type_index": 4326,
+          "token": 67109041
+        },
+        {
+          "name": "OnBodyPartAdded",
+          "type_index": 4379,
+          "token": 67109042
+        },
+        {
+          "name": "OnBodyPartUpdated",
+          "type_index": 4379,
+          "token": 67109043
+        },
+        {
+          "name": "OnBodyPartRemoved",
+          "type_index": 5088,
+          "token": 67109044
+        },
+        {
+          "name": "_config",
+          "type_index": 14806,
+          "token": 67109045
+        },
+        {
+          "name": "_predictedBodyParts",
+          "type_index": 11714,
+          "token": 67109046
+        },
+        {
+          "name": "_snakePath",
+          "type_index": 15681,
+          "token": 67109047
+        },
+        {
+          "name": "_generateBodyPartCallback",
+          "type_index": 7583,
+          "token": 67109048
+        },
+        {
+          "name": "_collisionCheckCallback",
+          "type_index": 5942,
+          "token": 67109049
+        },
+        {
+          "name": "_previousMoveDirection",
+          "type_index": 42861,
+          "token": 67109050
+        },
+        {
+          "name": "_previousHeadPosition",
+          "type_index": 42861,
+          "token": 67109051
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_DistanceBetweenBodyParts",
+          "declaring_type": 18863,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663627,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_DistanceBetweenBodyParts",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106015,
+          "parameter_count": 1,
+          "token": 100663628,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_ScorePerBodyPart",
+          "declaring_type": 18863,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663629,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_ScorePerBodyPart",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106016,
+          "parameter_count": 1,
+          "token": 100663630,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_MinimumBodyPartsCount",
+          "declaring_type": 18863,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663631,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_MinimumBodyPartsCount",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106017,
+          "parameter_count": 1,
+          "token": 100663632,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_MaximumBodyPartsCount",
+          "declaring_type": 18863,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663633,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_MaximumBodyPartsCount",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106018,
+          "parameter_count": 1,
+          "token": 100663634,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_LinearSpeed",
+          "declaring_type": 18863,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663635,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_LinearSpeed",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106019,
+          "parameter_count": 1,
+          "token": 100663636,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_AngularSpeed",
+          "declaring_type": 18863,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663637,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_AngularSpeed",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106020,
+          "parameter_count": 1,
+          "token": 100663638,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_TargetHeadDirection",
+          "declaring_type": 18863,
+          "return_type": 42860,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663639,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_TargetHeadDirection",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106021,
+          "parameter_count": 1,
+          "token": 100663640,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_TotalDistance",
+          "declaring_type": 18863,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663641,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_TotalDistance",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106022,
+          "parameter_count": 1,
+          "token": 100663642,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_Score",
+          "declaring_type": 18863,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663643,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_Score",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106023,
+          "parameter_count": 1,
+          "token": 100663644,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_SpeedMultiplier",
+          "declaring_type": 18863,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663645,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_SpeedMultiplier",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106024,
+          "parameter_count": 1,
+          "token": 100663646,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_BodyPartsScaleMultiplier",
+          "declaring_type": 18863,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663647,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_BodyPartsScaleMultiplier",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106025,
+          "parameter_count": 1,
+          "token": 100663648,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_PredictedHeadPosition",
+          "declaring_type": 18863,
+          "return_type": 42860,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663649,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_PredictedHeadPosition",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106026,
+          "parameter_count": 1,
+          "token": 100663650,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_PredictedHeadRotation",
+          "declaring_type": 18863,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663651,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_PredictedHeadRotation",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106027,
+          "parameter_count": 1,
+          "token": 100663652,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_PredictedHeadDirection",
+          "declaring_type": 18863,
+          "return_type": 42860,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663653,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_PredictedHeadDirection",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106028,
+          "parameter_count": 1,
+          "token": 100663654,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_StopOnCollision",
+          "declaring_type": 18863,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663655,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_StopOnCollision",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106029,
+          "parameter_count": 1,
+          "token": 100663656,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_RemovePathPointsBehindTailAutomatically",
+          "declaring_type": 18863,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663657,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_RemovePathPointsBehindTailAutomatically",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106030,
+          "parameter_count": 1,
+          "token": 100663658,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_IsStopped",
+          "declaring_type": 18863,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663659,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_IsStopped",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106031,
+          "parameter_count": 1,
+          "token": 100663660,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_RemoveBodyPartsFromHeadToTail",
+          "declaring_type": 18863,
+          "return_type": 21497,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663661,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "set_RemoveBodyPartsFromHeadToTail",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106032,
+          "parameter_count": 1,
+          "token": 100663662,
+          "flags": 2177,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": "get_Length",
+          "declaring_type": 18863,
+          "return_type": 30545,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663663,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_HeadRadius",
+          "declaring_type": 18863,
+          "return_type": 38439,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663664,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_Path",
+          "declaring_type": 18863,
+          "return_type": 15680,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663665,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "get_PredictedBodyParts",
+          "declaring_type": 18863,
+          "return_type": 11713,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663666,
+          "flags": 2182,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": ".ctor",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106033,
+          "parameter_count": 1,
+          "token": 100663667,
+          "flags": 6278,
+          "slot": 65535,
+          "parameters": [
+            "config"
+          ]
+        },
+        {
+          "name": "Initialize",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663668,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "ChangeTargetHeadDirection",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106034,
+          "parameter_count": 1,
+          "token": 100663669,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "targetHeadDirection"
+          ]
+        },
+        {
+          "name": "ChangeScore",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106035,
+          "parameter_count": 1,
+          "token": 100663670,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "score"
+          ]
+        },
+        {
+          "name": "ChangeSpeedMultiplier",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106036,
+          "parameter_count": 1,
+          "token": 100663671,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "speedMultiplier"
+          ]
+        },
+        {
+          "name": "ChangeBodyPartsScaleMultiplier",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106037,
+          "parameter_count": 1,
+          "token": 100663672,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "bodyPartsScaleMultiplier"
+          ]
+        },
+        {
+          "name": "ChangeRemovePathPointsBehindTailAutomatically",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106038,
+          "parameter_count": 1,
+          "token": 100663673,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "removePathPointsBehindTailAutomatically"
+          ]
+        },
+        {
+          "name": "MoveBody",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663674,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "MoveHead",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106039,
+          "parameter_count": 2,
+          "token": 100663675,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "newHeadPosition",
+            "newHeadRotation"
+          ]
+        },
+        {
+          "name": "MoveHead",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106041,
+          "parameter_count": 1,
+          "token": 100663676,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "dt"
+          ]
+        },
+        {
+          "name": "ResetPrediction",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106042,
+          "parameter_count": 10,
+          "token": 100663677,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "headPosition",
+            "headDirection",
+            "headRotation",
+            "bodyParts",
+            "speedMultiplier",
+            "bodyPartsScaleMultiplier",
+            "score",
+            "bonusScore",
+            "path",
+            "firstPathPoint"
+          ]
+        },
+        {
+          "name": "GetHeadRotation",
+          "declaring_type": 18863,
+          "return_type": 38439,
+          "parameter_start": 106052,
+          "parameter_count": 1,
+          "token": 100663678,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "headDirection"
+          ]
+        },
+        {
+          "name": "GetHeadDirection",
+          "declaring_type": 18863,
+          "return_type": 42860,
+          "parameter_start": 106053,
+          "parameter_count": 1,
+          "token": 100663679,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "headRotation"
+          ]
+        },
+        {
+          "name": "RepositionBodyParts",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663680,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "AddOrRemoveBodyParts",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663681,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "AddBodyPart",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663682,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "RemoveBodyPart",
+          "declaring_type": 18863,
+          "return_type": 43088,
+          "parameter_start": 106054,
+          "parameter_count": 2,
+          "token": 100663683,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": [
+            "bodyPart",
+            "totalLeft"
+          ]
+        }
+      ]
+    },
+    {
+      "image": "SnakeIO.Common.dll",
+      "type": "SnakeIO.Common.Prediction.SnakeStatePredictorConfig`2",
+      "fields": [
+        {
+          "name": "generateBodyPartCallback",
+          "type_index": 7582,
+          "token": 67109057
+        },
+        {
+          "name": "collisionCheckCallback",
+          "type_index": 5941,
+          "token": 67109058
+        },
+        {
+          "name": "stopOnCollision",
+          "type_index": 21503,
+          "token": 67109059
+        },
+        {
+          "name": "removePathPointsBehindTailAutomatically",
+          "type_index": 21503,
+          "token": 67109060
+        },
+        {
+          "name": "removeBodyPartsFromHeadToTail",
+          "type_index": 21503,
+          "token": 67109061
+        },
+        {
+          "name": "headRadius",
+          "type_index": 38444,
+          "token": 67109062
+        },
+        {
+          "name": "distanceBetweenBodyParts",
+          "type_index": 38444,
+          "token": 67109063
+        },
+        {
+          "name": "scorePerBodyPart",
+          "type_index": 30550,
+          "token": 67109064
+        },
+        {
+          "name": "minimumBodyPartsCount",
+          "type_index": 30550,
+          "token": 67109065
+        },
+        {
+          "name": "maximumBodyPartsCount",
+          "type_index": 30550,
+          "token": 67109066
+        },
+        {
+          "name": "linearSpeed",
+          "type_index": 38444,
+          "token": 67109067
+        },
+        {
+          "name": "angularSpeed",
+          "type_index": 38444,
+          "token": 67109068
+        },
+        {
+          "name": "initialPathNodesCapacity",
+          "type_index": 30550,
+          "token": 67109069
+        },
+        {
+          "name": "initialSpeedMultiplier",
+          "type_index": 38444,
+          "token": 67109070
+        },
+        {
+          "name": "initialBodyPartsScaleMultiplier",
+          "type_index": 38444,
+          "token": 67109071
+        },
+        {
+          "name": "initialBodyParts",
+          "type_index": 11712,
+          "token": 67109072
+        },
+        {
+          "name": "initialHeadPosition",
+          "type_index": 42864,
+          "token": 67109073
+        },
+        {
+          "name": "initialHeadDirection",
+          "type_index": 42864,
+          "token": 67109074
+        },
+        {
+          "name": "initialHeadRotation",
+          "type_index": 38444,
+          "token": 67109075
+        },
+        {
+          "name": "initialScore",
+          "type_index": 30550,
+          "token": 67109076
+        },
+        {
+          "name": "initialBonusScore",
+          "type_index": 30550,
+          "token": 67109077
+        }
+      ],
+      "methods": []
+    },
+    {
+      "image": "SnakeIO.Common.dll",
+      "type": "SnakeIO.Common.Input.SnakeStatePredictorSettings",
+      "fields": [
+        {
+          "name": "headRadius",
+          "type_index": 38444,
+          "token": 67109416
+        },
+        {
+          "name": "distanceBetweenBodyParts",
+          "type_index": 38444,
+          "token": 67109417
+        },
+        {
+          "name": "linearSpeed",
+          "type_index": 38444,
+          "token": 67109418
+        },
+        {
+          "name": "angularSpeed",
+          "type_index": 38444,
+          "token": 67109419
+        },
+        {
+          "name": "scorePerBodyPart",
+          "type_index": 30536,
+          "token": 67109420
+        },
+        {
+          "name": "minBodyPartsCount",
+          "type_index": 30536,
+          "token": 67109421
+        },
+        {
+          "name": "maxBodyPartsCount",
+          "type_index": 30536,
+          "token": 67109422
+        },
+        {
+          "name": "ValueCreator",
+          "type_index": 7705,
+          "token": 67109423
+        },
+        {
+          "name": "PerDataBlockDeserializer",
+          "type_index": 14132,
+          "token": 67109424
+        }
+      ],
+      "methods": [
+        {
+          "name": "Default",
+          "declaring_type": 18945,
+          "return_type": 39126,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100664062,
+          "flags": 150,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "Serialize",
+          "declaring_type": 18945,
+          "return_type": 43088,
+          "parameter_start": 106524,
+          "parameter_count": 3,
+          "token": 100664063,
+          "flags": 150,
+          "slot": 65535,
+          "parameters": [
+            "value",
+            "target",
+            "targetOffset"
+          ]
+        },
+        {
+          "name": "Deserialize",
+          "declaring_type": 18945,
+          "return_type": 43088,
+          "parameter_start": 106527,
+          "parameter_count": 3,
+          "token": 100664064,
+          "flags": 150,
+          "slot": 65535,
+          "parameters": [
+            "value",
+            "source",
+            "sourceOffset"
+          ]
+        },
+        {
+          "name": "PerDataBlockDelegate",
+          "declaring_type": 18945,
+          "return_type": 43088,
+          "parameter_start": 106530,
+          "parameter_count": 2,
+          "token": 100664065,
+          "flags": 145,
+          "slot": 65535,
+          "parameters": [
+            "dataBlock",
+            "deserializedValue"
+          ]
+        },
+        {
+          "name": "GetBytesCount",
+          "declaring_type": 18945,
+          "return_type": 30545,
+          "parameter_start": 106532,
+          "parameter_count": 1,
+          "token": 100664066,
+          "flags": 150,
+          "slot": 65535,
+          "parameters": [
+            "value"
+          ]
+        },
+        {
+          "name": ".cctor",
+          "declaring_type": 18945,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100664067,
+          "flags": 6289,
+          "slot": 65535,
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "image": "SnakeIO.Common.dll",
+      "type": "SnakeIO.Common.Input.SnakeStatePredictorSettingsExtensions",
+      "fields": [
+        {
+          "name": "SerializeTypeDelegate",
+          "type_index": 14657,
+          "token": 67109425
+        },
+        {
+          "name": "DeserializeTypeDelegate",
+          "type_index": 6261,
+          "token": 67109426
+        },
+        {
+          "name": "BytesCountDelegate",
+          "type_index": 5814,
+          "token": 67109427
+        }
+      ],
+      "methods": [
+        {
+          "name": "SerializeSnakeStatePredictorSettings",
+          "declaring_type": 18946,
+          "return_type": 21317,
+          "parameter_start": 106533,
+          "parameter_count": 5,
+          "token": 100664068,
+          "flags": 150,
+          "slot": 65535,
+          "parameters": [
+            "serializer",
+            "blockId",
+            "value",
+            "target",
+            "targetOffset"
+          ]
+        },
+        {
+          "name": "DeserializeSnakeStatePredictorSettings",
+          "declaring_type": 18946,
+          "return_type": 39126,
+          "parameter_start": 106538,
+          "parameter_count": 1,
+          "token": 100664069,
+          "flags": 150,
+          "slot": 65535,
+          "parameters": [
+            "dataBlock"
+          ]
+        },
+        {
+          "name": "AddSnakeStatePredictorSettings",
+          "declaring_type": 18946,
+          "return_type": 21318,
+          "parameter_start": 106539,
+          "parameter_count": 3,
+          "token": 100664070,
+          "flags": 150,
+          "slot": 65535,
+          "parameters": [
+            "calculator",
+            "blockId",
+            "value"
+          ]
+        },
+        {
+          "name": ".cctor",
+          "declaring_type": 18946,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100664071,
+          "flags": 6289,
+          "slot": 65535,
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "image": "SnakeIO.Client.Unity.dll",
+      "type": "SnakeIO.Client.Unity.SnakeStatePredictorSettingsProvider",
+      "fields": [
+        {
+          "name": "_defaultSettings",
+          "type_index": 39127,
+          "token": 67108865
+        },
+        {
+          "name": "_overrideSettings",
+          "type_index": 13802,
+          "token": 67108866
+        }
+      ],
+      "methods": [
+        {
+          "name": "OnDisable",
+          "declaring_type": 22181,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663297,
+          "flags": 129,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "Provide",
+          "declaring_type": 22181,
+          "return_type": 39126,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663298,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": []
+        },
+        {
+          "name": "OverrideSettings",
+          "declaring_type": 22181,
+          "return_type": 43088,
+          "parameter_start": 124058,
+          "parameter_count": 1,
+          "token": 100663299,
+          "flags": 134,
+          "slot": 65535,
+          "parameters": [
+            "newSettings"
+          ]
+        },
+        {
+          "name": ".ctor",
+          "declaring_type": 22181,
+          "return_type": 43088,
+          "parameter_start": -1,
+          "parameter_count": 0,
+          "token": 100663300,
+          "flags": 6278,
+          "slot": 65535,
+          "parameters": []
+        }
+      ]
+    }
+  ]
+}

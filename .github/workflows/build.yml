@@ -1,0 +1,115 @@
+name: Build SnakeModMenu APK set
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  ANDROID_NDK_VERSION: 27.2.12479018
+  ANDROID_PLATFORM: android-35
+  BUILD_TOOLS_VERSION: 35.0.0
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Install Android build tools
+        run: |
+          sdkmanager "platform-tools" "platforms;${ANDROID_PLATFORM}" "build-tools;${BUILD_TOOLS_VERSION}" "ndk;${ANDROID_NDK_VERSION}" "cmake;3.22.1"
+          echo "$ANDROID_HOME/build-tools/${BUILD_TOOLS_VERSION}" >> "$GITHUB_PATH"
+          echo "$ANDROID_HOME/platform-tools" >> "$GITHUB_PATH"
+
+      - name: Install packaging tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y patchelf zip unzip python3
+          curl -fsSL -o /usr/local/bin/apktool.jar https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.10.0.jar
+          printf '#!/bin/sh\nexec java -jar /usr/local/bin/apktool.jar "$@"\n' | sudo tee /usr/local/bin/apktool >/dev/null
+          sudo chmod +x /usr/local/bin/apktool
+
+      - name: Download original split package from source release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p input
+          gh release download source-apk --repo "$GITHUB_REPOSITORY" --pattern '*.apk+' --dir input
+          test "$(find input -maxdepth 1 -type f -name '*.apk+' | wc -l)" -eq 1
+          mv input/*.apk+ input/original.apk+
+
+      - name: Build ARM64 native hook
+        run: |
+          cmake -S native -B native/build \
+            -DCMAKE_TOOLCHAIN_FILE="$ANDROID_HOME/ndk/${ANDROID_NDK_VERSION}/build/cmake/android.toolchain.cmake" \
+            -DANDROID_ABI=arm64-v8a -DANDROID_PLATFORM=android-24 -DCMAKE_BUILD_TYPE=Release
+          cmake --build native/build --config Release -j2
+          test -f native/build/libsnakemod.so
+
+      - name: Decode package and inject menu classes
+        run: |
+          mkdir -p input work/original work/base work/arm64 work/dex
+          python3 - <<'PY'
+          import zipfile
+          with zipfile.ZipFile('input/original.apk+') as z:
+              z.extractall('work/original')
+          PY
+          apktool d -f work/original/base.apk -o work/base
+          apktool d -f work/original/split_config.arm64_v8a.apk -o work/arm64
+          python3 scripts/patch_manifest.py work/base/AndroidManifest.xml
+          ANDROID_JAR="$ANDROID_HOME/platforms/${ANDROID_PLATFORM}/android.jar"
+          javac -source 8 -target 8 -classpath "$ANDROID_JAR" -d work/classes $(find java -name '*.java')
+          "$ANDROID_HOME/build-tools/${BUILD_TOOLS_VERSION}/d8" --lib "$ANDROID_JAR" --min-api 24 --output work/dex work/classes
+          max=1
+          for f in work/base/classes*.dex; do
+            [ -e "$f" ] || continue
+            n=$(basename "$f" | sed -E 's/classes([0-9]*)\.dex/\1/')
+            [ -z "$n" ] && n=1
+            [ "$n" -gt "$max" ] && max=$n
+          done
+          cp work/dex/classes.dex "work/base/classes$((max+1)).dex"
+          mkdir -p work/arm64/lib/arm64-v8a
+          cp native/build/libsnakemod.so work/arm64/lib/arm64-v8a/libsnakemod.so
+          python3 scripts/patch_native_needed.py work/arm64/lib/arm64-v8a/libmain.so
+          apktool b work/base -o work/base-unsigned.apk
+          apktool b work/arm64 -o work/arm64-unsigned.apk
+
+      - name: Align and sign all split APKs
+        run: |
+          mkdir -p output/signed
+          keytool -genkeypair -v -keystore work/debug.keystore -storepass android -keypass android \
+            -alias androiddebugkey -dname "CN=SnakeModMenu, O=Local Build, C=US" \
+            -keyalg RSA -keysize 2048 -validity 10000
+          sign_one() {
+            in="$1"; name="$2"
+            zipalign -f -p 4 "$in" "work/aligned-$name"
+            apksigner sign --ks work/debug.keystore --ks-pass pass:android --key-pass pass:android \
+              --out "output/signed/$name" "work/aligned-$name"
+            apksigner verify --verbose "output/signed/$name"
+          }
+          sign_one work/base-unsigned.apk base.apk
+          sign_one work/arm64-unsigned.apk split_config.arm64_v8a.apk
+          sign_one work/original/split_gpdeku.apk split_gpdeku.apk
+          sign_one work/original/split_gpdeku.config.arm64_v8a.apk split_gpdeku.config.arm64_v8a.apk
+          cp work/original/apk+.json output/signed/ 2>/dev/null || true
+          cp work/original/icon.png output/signed/ 2>/dev/null || true
+          (cd output/signed && zip -9 -r ../SnakeModMenu.apk+ .)
+
+      - name: Upload installable split package
+        uses: actions/upload-artifact@v4
+        with:
+          name: SnakeModMenu-apk-set
+          path: output/SnakeModMenu.apk+
+          if-no-files-found: error
+          retention-days: 14

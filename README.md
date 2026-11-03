@@ -39,13 +39,13 @@ The metadata inspection identified:
 
 ## Build input required by GitHub Actions
 
-GitHub blocks ordinary repository files larger than 100 MiB, so the original ~138 MiB split archive is not committed to Git. Upload the original `.apk+` archive as an asset on a GitHub Release with the tag **`source-apk`**. The workflow downloads the `.apk+` asset from that release.
+GitHub blocks ordinary repository files larger than 100 MiB, so the original ~138 MiB split archive is not committed to Git. Upload the supplied archive renamed with a `.zip` extension as an asset on a GitHub Release with the tag **`source-apk`**. The archive is already a ZIP; only its filename extension changes. The workflow downloads the `.zip` asset and renames it internally to `original.apk+`.
 
 Then run **Actions → Build SnakeModMenu APK set → Run workflow**. The artifact is `SnakeModMenu-apk-set` and contains all four re-signed APK splits in one `.apk+` archive.
 
 ## Important status
 
-The project source files and the APK packaging workflow are now committed to the `main` branch. **The final APK has not yet been built or tested on a device.** Before running the build, upload the original split-package `.apk+` archive as an asset on a GitHub Release tagged `source-apk`, then run the workflow from the Actions tab.
+The project source files and the APK packaging workflow are now committed to the `main` branch. **The final APK has not yet been built or tested on a device.** Before running the build, upload the split-package archive renamed to `.zip` as an asset on a GitHub Release tagged `source-apk`. Publishing that release automatically triggers the workflow.
 
 The workflow generates a temporary signing key on each run. Android treats the modded package as a different signature from the store-installed version, so uninstall the original before installing all four modded splits. A later build uses a new temporary key too; uninstall the previous modded build before installing that one.
 

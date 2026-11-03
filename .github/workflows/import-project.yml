@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '.import/part*.txt'
+      - '.import/trigger.txt'
 
 permissions:
   contents: write
@@ -19,10 +19,7 @@ jobs:
         shell: bash
         run: |
           python3 - <<'PY'
-          import base64
-          import gzip
-          import io
-          import tarfile
+          import base64, gzip, io, tarfile
           from pathlib import Path, PurePosixPath
 
           parts = sorted(Path(".import").glob("part*.txt"))
@@ -34,6 +31,8 @@ jobs:
               for entry in archive.getmembers():
                   path = PurePosixPath(entry.name)
                   if path.is_absolute() or ".." in path.parts or not entry.isfile():
+                      continue
+                  if path.as_posix() == ".github/workflows/build.yml":
                       continue
                   target = Path(*path.parts)
                   target.parent.mkdir(parents=True, exist_ok=True)
